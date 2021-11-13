@@ -3,7 +3,20 @@
 	<iostream>
 	<locale.h>
 
-1636747323 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1636763637 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
 	<locale.h>
+	<fstream>
+	<string>
+	"include/DLinkedList.h"
+
+1634925830 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
+	"List.h"
+	"DNode.h"
+	<stdexcept>
+	<iostream>
+
+1631325372 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\list.h
+
+1629913355 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 

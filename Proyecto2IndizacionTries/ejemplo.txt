@@ -1,0 +1,5 @@
+Esto es una prueba para que la aplicación del proyecto me distinga las diferentes palabras según la línea en la que está
+Esa es la línea 2
+Mientras que por otro lado esta es la línea 3 en la cual
+necesito meter cada línea con un getline en un string y luego ese string puedo separarlo en palabras las cuales pueden
+ir en una lista kvpair donde un elemento es el número de línea y lo otro la palabra. 

@@ -1,7 +1,13 @@
 #ifndef AVLTREEDICTIONARY_H
 #define AVLTREEDICTIONARY_H
 
+#include "Dictionary.h"
+#include "KVPair.h"
 #include "AVLTree.h"
+
+using std::runtime_error;
+using std::cout;
+using std::endl;
 
 template <typename K, typename V>
 class AVLTreeDictionary : public Dictionary<K,V>
@@ -43,18 +49,18 @@ public:
         return elements.contains(p);
     }
 
-    List<K>* getKeys(){
+    List<K>* getKeys() {
         List<K> *keys = new DLinkedList<K>();
-        List<KVPair<K,V>> pairs = elements.getElements();
-        for (pairs -> goToStart(); !pairs -> atEnd(); pairs -> next()){
-            KVPair<K,V> p = pairs -> getElement();
-            keys -> append(p.key);
+        List<KVPair<K, V>> *pairs = elements.getElements();
+        for (pairs->goToStart(); !pairs->atEnd(); pairs->next()) {
+            KVPair<K, V> p = pairs->getElement();
+            keys->append(p.key);
         }
         delete pairs;
         return keys;
     }
 
-    List<V> getValues(){
+    List<V>* getValues(){
         List<V> *values = new DLinkedList<V>();
         List<KVPair<K,V>> *pairs = elements.getElements();
         for (pairs -> goToStart(); !pairs -> atEnd(); pairs -> next()){
@@ -72,9 +78,14 @@ public:
     void clear(){
         elements.clear();
     }
-    void print(){
-        cout << "{ ";
-
+    void print() {
+        cout << "[ ";
+        auto *pairs = elements.getElements();
+        for (pairs->goToStart(); !pairs->atEnd(); pairs->next()) {
+            auto p = pairs->getElement();
+            cout << p.key << ":" << p.value << " ";
+        }
+        cout << "]" << endl;
     }
 
 };

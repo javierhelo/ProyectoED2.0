@@ -1,19 +1,23 @@
 #ifndef TRIENODE_H
 #define TRIENODE_H
 
+#include "AVLTreeDictionary.h"
+#include "DLinkedList.h"
 #include "BSTDictionary.h"
 
 class TrieNode{
 private:
-    BSTDictionary<char, TrieNode*> children;
+    AVLTreeDictionary<char, TrieNode*> children;
 
 public:
     bool isFinal;
     int prefixCount; //insigned = solo enteros positivos
+    DLinkedList<int> *lineas;
 
     TrieNode() : children(){
         isFinal = false;
         prefixCount = 0;
+        lineas = new DLinkedList<int>();
     }
     ~TrieNode(){}   //memoria estática, c++ borra children
     bool contains(char c){

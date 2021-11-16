@@ -20,3 +20,66 @@
 
 1629913355 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
+1637033675 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+	<iostream>
+	<locale.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iterator>
+	<vector>
+	<algorithm>
+	"include/DLinkedList.h"
+	"include/Trie.h"
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
+	"List.h"
+	"DNode.h"
+	<stdexcept>
+	<iostream>
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\list.h
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
+
+1637033564 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trie.h
+	<string>
+	<iostream>
+	<stdexcept>
+	"TrieNode.h"
+
+1637033504 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
+	"AVLTreeDictionary.h"
+	"DLinkedList.h"
+	"BSTDictionary.h"
+
+1637033843 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltreedictionary.h
+	"Dictionary.h"
+	"KVPair.h"
+	"AVLTree.h"
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
+	"List.h"
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
+	<iostream>
+
+1637034022 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltree.h
+	"BSTNode.h"
+	<stdexcept>
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstnode.h
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstdictionary.h
+	<stdexcept>
+	<iostream>
+	"Dictionary.h"
+	"BSTree.h"
+	"DLinkedList.h"
+	"KVPair.h"
+
+1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstree.h
+	"BSTNode.h"
+	"DLinkedList.h"
+	<stdexcept>
+

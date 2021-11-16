@@ -24,13 +24,13 @@ private:
             return rebalanceLeft(current);
         }
         else{
-            current->right = insertAux(current->right, element)
+            current->right = insertAux(current->right, element);
             return rebalanceRight(current);
         }
     }
 
     BSTNode<E> *rebalanceLeft(BSTNode<E> *current){
-        int leftHeight = height(curent->left);
+        int leftHeight = height(current->left);
         int rightHeight = height(current->right);
         if (leftHeight - rightHeight > 1){
             int leftLeftHeight = height(current->left->left);
@@ -50,7 +50,7 @@ private:
 
     BSTNode<E> *rebalanceRight(BSTNode<E> *current){
         int rightHeight = height(current->right);
-        int leftHeight = height(curent->left);
+        int leftHeight = height(current->left);
         if (rightHeight - leftHeight > 1){
             int rightLeftHeight = height(current->right->left);
             int rightRightHeight = height(current->right->right);
@@ -70,8 +70,8 @@ private:
     int height(BSTNode<E> *current) {
         if (current == nullptr)
             return 0;
-        int leftHeight = heightAux(current->left);
-        int rightHeight = heightAux(current->right);
+        int leftHeight = height(current->left);
+        int rightHeight = height(current->right);
         if (leftHeight > rightHeight)
             return 1 + leftHeight;
         else
@@ -139,14 +139,14 @@ private:
                 delete current;
                 return nullptr;
             }
-            if (current->childrencount() == 1){
+            if (current->childrenCount() == 1){
                 BSTNode<E>* child = current->getUniqueChild();
                 delete current;
                 return child;
             }
             else{
                 // el nodo tiene dos hijos
-                BSTNode<E> *succesor = getSuccessor(current);
+                BSTNode<E> *successor = getSuccessor(current);
                 swap(current, successor);
                 current->right = removeAux(current->right, element, result);
                 return current;
@@ -154,16 +154,11 @@ private:
         }
     }
 
-    BSTNode<E> *getSuccessor(BSTNode<E> *current){
-            if (current->left == nullptr)
-                return current;
-            else
-                return getSuccesor(current->left);
-
-            /* con iteracion:
-            while (current->left != nullptr)
-                current = current->left;
-            return current;*/
+    BSTNode<E>* getSuccessor(BSTNode<E> *current){
+        if (current->left == nullptr)
+            return current;
+        else
+            return getSuccessor(current->left);
     }
 
     void swap(BSTNode<E> *node1, BSTNode<E> *node2){
@@ -183,8 +178,8 @@ private:
     void getElementsAux(BSTNode<E> *current, List<E> *elements){
         if (current == nullptr)
             return;
-        getElementsAux(current->left; elements);
-        elements->append(current->elements);
+        getElementsAux(current->left, elements);
+        elements->append(current->element);
         getElementsAux(current->right, elements);
     }
 
@@ -224,7 +219,7 @@ public:
     }
 
     List<E> *getElements(){
-        List<E> *elements = new DLinkedlist<E>();
+        List<E> *elements = new DLinkedList<E>();
         getElementsAux(root, elements);
         return elements;
     }

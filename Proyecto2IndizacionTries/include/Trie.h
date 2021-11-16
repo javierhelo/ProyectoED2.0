@@ -43,7 +43,7 @@ public:
         clear();
         delete root;
     }
-    void insert(string word){
+    void insert(string word, int line){
         if (containsWord(word))
             throw runtime_error("Word already in trie.");
         TrieNode *current = root;
@@ -55,6 +55,7 @@ public:
         }
         current->prefixCount++;
         current->isFinal = true;
+        current->lineas->append(line);
     }
     bool containsWord(string word){
         TrieNode *current = root;
@@ -127,6 +128,18 @@ public:
     }
     int getSize(){
         return root->prefixCount;
+    }
+    void addLine(int line, string word){
+        TrieNode *current = root;
+        for (unsigned int i = 0; i < word.size(); i++)
+            current = current->getChild(word[i]);
+        current->lineas->append(line);
+    }
+    List<int>* getLines(string word){
+        TrieNode *current = root;
+        for (unsigned int i = 0; i < word.size(); i++)
+            current = current->getChild(word[i]);
+        return current->lineas;
     }
 };
 

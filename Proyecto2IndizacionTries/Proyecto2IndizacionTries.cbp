@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="include/AVLTree.h" />
 		<Unit filename="include/AVLTreeDictionary.h" />
+		<Unit filename="include/ArrayList.h" />
 		<Unit filename="include/BSTDictionary.h" />
 		<Unit filename="include/BSTNode.h" />
 		<Unit filename="include/BSTree.h" />
@@ -42,6 +43,7 @@
 		<Unit filename="include/Dictionary.h" />
 		<Unit filename="include/KVPair.h" />
 		<Unit filename="include/List.h" />
+		<Unit filename="include/MaxHeap.h" />
 		<Unit filename="include/Trie.h" />
 		<Unit filename="include/TrieNode.h" />
 		<Unit filename="main.cpp" />

@@ -8,6 +8,7 @@
 #include <algorithm>
 #include "include/DLinkedList.h"
 #include "include/Trie.h"
+#include "include/MaxHeap.h"
 
 using std::cout; using std::cin;
 using std::endl; using std::string;

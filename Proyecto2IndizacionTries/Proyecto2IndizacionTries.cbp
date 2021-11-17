@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,6 +40,7 @@
 		<Unit filename="include/BSTDictionary.h" />
 		<Unit filename="include/BSTNode.h" />
 		<Unit filename="include/BSTree.h" />
+		<Unit filename="include/Controlador.h" />
 		<Unit filename="include/DLinkedList.h" />
 		<Unit filename="include/DNode.h" />
 		<Unit filename="include/Dictionary.h" />

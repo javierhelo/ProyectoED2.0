@@ -20,7 +20,7 @@
 
 1629913355 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
-1637033675 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637192118 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
 	<locale.h>
 	<fstream>
@@ -31,6 +31,8 @@
 	<algorithm>
 	"include/DLinkedList.h"
 	"include/Trie.h"
+	"include/MaxHeap.h"
+	"Controlador.h"
 
 1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
@@ -82,4 +84,27 @@
 	"BSTNode.h"
 	"DLinkedList.h"
 	<stdexcept>
+
+1637119251 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+	"KVPair.h"
+	"List.h"
+	"ArrayList.h"
+	<stdexcept>
+
+1633365081 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\arraylist.h
+	"List.h"
+	<stdexcept>
+
+1637192161 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+	<iostream>
+	<locale.h>
+	<fstream>
+	<string>
+	<sstream>
+	<iterator>
+	<vector>
+	<algorithm>
+	"DLinkedList.h"
+	"Trie.h"
+	"MaxHeap.h"
 

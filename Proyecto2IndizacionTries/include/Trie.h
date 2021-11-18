@@ -141,6 +141,12 @@ public:
             current = current->getChild(word[i]);
         return current->lineas;
     }
+    int getNumLines(string word){
+        TrieNode *current = root;
+        for (unsigned int i = 0; i < word.size(); i++)
+            current = current->getChild(word[i]);
+        return current->lineas->getSize();
+    }
 };
 
 #endif // TRIE_H

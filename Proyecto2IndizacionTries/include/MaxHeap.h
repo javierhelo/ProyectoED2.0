@@ -1,6 +1,5 @@
 #ifndef MAXHEAP_H
 #define MAXHEAP_H
-#define DEFAULT_MAX_SIZE 1024
 #include "KVPair.h"
 #include "List.h"
 #include "ArrayList.h"
@@ -53,7 +52,7 @@ private:
     }
 
 public:
-    MaxHeap(int max = DEFAULT_MAX_SIZE){
+    MaxHeap(int max = 100000){
         if (max < 1)
             throw runtime_error("Max size must be positive");
         elements = new KVPair<K,V>[max];
@@ -96,10 +95,9 @@ public:
     bool isEmpty(){
         return size==0;
     }
-    void printArray(){
-        for (int i = 0; i < size; i++)
-            cout << elements[i] << " ";
-        cout << endl;
+    void printArray(int n){
+        for (int i = 0; i < n; i++)
+            cout << i << ". " << elements[i] << endl;
     }
     List<KVPair<K,V>>* removeTop(int n){
         if (n > size)

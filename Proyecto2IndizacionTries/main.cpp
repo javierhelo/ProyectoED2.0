@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+
     Controlador *elControlador = new Controlador();
     setlocale(LC_ALL, "spanish");
 
@@ -14,11 +15,15 @@ int main(){
     getline(cin, nombreArchivo);
     nombreArchivo += ".txt";            //Se le agrega la extensión para poder abrirlo
     bool seProceso = elControlador->procesarArchivo(nombreArchivo);       //llama a la función que lee el archivo y agrega las palabaras en el trie
-    if (seProceso == false){
+    if (seProceso == false)
         return 0;
-    }
-    elControlador->verListaLineas();
-    elControlador->verArbol();
+    else
+        cout << "Se proceso el archivo con éxito" << endl;
+    //elControlador->verListaLineas();
+    //elControlador->verArbol();
+    //elControlador->buscarPalabra("que");
+    elControlador->verTop(3);
+
 
     return 0;
 }

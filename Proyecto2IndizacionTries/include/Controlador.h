@@ -22,7 +22,7 @@ class Controlador{
 public:
     Trie *elArbol;
     List<string> *lineasArchivo;
-
+    List<string> *palabrasIgnorar = new DLinkedList<string>();
     Controlador(){
         elArbol = new Trie();
         lineasArchivo = new DLinkedList<string>();
@@ -79,7 +79,41 @@ public:
         cout << "Lineas en las que aparece la palabra es: ";
         lineas->print();
     }
-
+    void agregarIgnorar(string palabra){
+        ofstream archivo("ignorar.txt", ios::app);//Abre el txt en modo append, asi no borra lo que ya hay escrito
+        if(archivo.is_open() && archivo.good()){
+            archivo << '\n' << palabra;
+            palabrasIgnorar->append(palabra);
+        }
+        archivo.close();
+    }
+    void borrarIgnorar(string palabra){
+        string word;
+        List<string> *lista= new DLinkedList<string>();
+        ifstream archivo("ignorar.txt");//Abre el archivo para lectura
+        if(archivo.is_open()){
+           while(archivo.good()){//crea una lista con todas las palabras que hay en el txt
+            getline(archivo,word);
+            lista->append(word);
+           }
+           archivo.close();
+        }
+        ofstream archivo2("ignorar.txt",ios::out | ios::trunc );//abre de nuevo el archivo pero esta vez lo deja en blanco
+        if(archivo2.is_open()){
+           for(int i = 0; i < lista->getSize();i++){//este for remueve la palabra de la lista de palabras
+                lista->goToPos(i);
+                string elemento = lista->getElement();
+                if(elemento == palabra)
+                   lista->remove();
+            }
+            for(int i = 0; i < lista->getSize();i++){//este for vuelve a agregar las palabras que quedaron en la lista al txt
+                lista->goToPos(i);
+                string elemento = lista->getElement();
+                archivo2 << '\n' << elemento ;
+            }
+            archivo.close();
+        }
+    }
 };
 
 #endif // CONTROLADOR_H

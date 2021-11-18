@@ -98,11 +98,11 @@
 	"Trie.h"
 	"MaxHeap.h"
 
-1637250788 source:c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637262552 source:c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
 	"Controlador.h"
 
-1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+1637263599 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 	<iostream>
 	<locale.h>
 	<fstream>

@@ -10,7 +10,8 @@ int main(){
 
     cout << "Hola, este es el proyecto de indización de textos con Tries." << endl;
     cout << "Ingrese el nombre del archivo de texto a analizar: ";
-
+    elControlador->agregarIgnorar("Hola");
+    elControlador->agregarIgnorar("Adios");
     string nombreArchivo;               //String ingresado por usuario
     getline(cin, nombreArchivo);
     nombreArchivo += ".txt";            //Se le agrega la extensión para poder abrirlo
@@ -23,7 +24,7 @@ int main(){
     //elControlador->verArbol();
     //elControlador->buscarPalabra("que");
     elControlador->verTop(3);
-
+    elControlador->borrarIgnorar("Hola");
 
     return 0;
 }

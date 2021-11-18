@@ -22,8 +22,6 @@ class Controlador{
 public:
     Trie *elArbol;
     List<string> *lineasArchivo;
-    List<string> *palabrasIgnorar = new DLinkedList<string>();
-    List<string> *ignorar;
 
     Controlador(){
         elArbol = new Trie();

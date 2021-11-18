@@ -9,9 +9,6 @@ int main(){
     setlocale(LC_ALL, "spanish");
 
     cout << "Hola, este es el proyecto de indizaci�n de textos con Tries." << endl;
-    elControlador->agregarIgnorar("hola");
-    elControlador->agregarIgnorar("aios");
-    elControlador->agregarIgnorar("gr");
     cout << "Ingrese el nombre del archivo de texto a analizar: ";
 
     string nombreArchivo;               //String ingresado por usuario
@@ -23,14 +20,6 @@ int main(){
     }
     elControlador->verListaLineas();
     elControlador->verArbol();
-    elControlador->borrarIgnorar("hola");
-    else
-        cout << "Se proceso el archivo con �xito" << endl;
-    //elControlador->verListaLineas();
-    //elControlador->verArbol();
-    //elControlador->buscarPalabra("que");
-    elControlador->verTop(3);
-
 
     return 0;
 }

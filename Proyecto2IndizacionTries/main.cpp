@@ -4,10 +4,11 @@
 using namespace std;
 
 int main(){
+
     Controlador *elControlador = new Controlador();
     setlocale(LC_ALL, "spanish");
 
-    cout << "Hola, este es el proyecto de indización de textos con Tries." << endl;
+    cout << "Hola, este es el proyecto de indizaciï¿½n de textos con Tries." << endl;
     elControlador->agregarIgnorar("hola");
     elControlador->agregarIgnorar("aios");
     elControlador->agregarIgnorar("gr");
@@ -15,13 +16,21 @@ int main(){
 
     string nombreArchivo;               //String ingresado por usuario
     getline(cin, nombreArchivo);
-    nombreArchivo += ".txt";            //Se le agrega la extensión para poder abrirlo
-    bool seProceso = elControlador->procesarArchivo(nombreArchivo);       //llama a la función que lee el archivo y agrega las palabaras en el trie
-    if (seProceso == false){
+    nombreArchivo += ".txt";            //Se le agrega la extensiï¿½n para poder abrirlo
+    bool seProceso = elControlador->procesarArchivo(nombreArchivo);       //llama a la funciï¿½n que lee el archivo y agrega las palabaras en el trie
+    if (seProceso == false)
         return 0;
     }
     elControlador->verListaLineas();
     elControlador->verArbol();
     elControlador->borrarIgnorar("hola");
+    else
+        cout << "Se proceso el archivo con ï¿½xito" << endl;
+    //elControlador->verListaLineas();
+    //elControlador->verArbol();
+    //elControlador->buscarPalabra("que");
+    elControlador->verTop(3);
+
+
     return 0;
 }

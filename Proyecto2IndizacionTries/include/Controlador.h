@@ -22,6 +22,7 @@ class Controlador{
 public:
     Trie *elArbol;
     List<string> *lineasArchivo;
+    List<string> *ignorar;
 
     Controlador(){
         elArbol = new Trie();
@@ -44,7 +45,7 @@ public:
                 lineasArchivo->append(linea);                      //se agregan linea por linea a la lista
                 std::transform(linea.begin(), linea.end(), linea.begin(),
                 [](unsigned char c){ return std::tolower(c); });    //pone todo en minusculas
-                for (int i = 0, len = linea.size(); i < len; i++){      // este for quita de la linea los signos de puntuaciï¿½n
+                for (int i = 0, len = linea.size(); i < len; i++){      // este for quita de la linea los signos de puntuación
                     if (ispunct(linea[i]) || std::isdigit(linea[i])){
                         linea.erase(i--, 1);
                         len = linea.size();
@@ -88,7 +89,7 @@ public:
     }
 
     void verListaLineas(){
-        for (int i = 0; i < lineasArchivo->getSize(); i++){         //se imprimen los contenidos de la lista enumerando las lï¿½neas.
+        for (int i = 0; i < lineasArchivo->getSize(); i++){         //se imprimen los contenidos de la lista enumerando las líneas.
             lineasArchivo->goToPos(i);
             string lineaActual = lineasArchivo->getElement();
             cout << to_string(i + 1) << ". " << lineaActual << endl;
@@ -96,47 +97,13 @@ public:
     }
 
     void verArbol(){
-        cout << "El ï¿½rbol: " << endl;
+        cout << "El árbol: " << endl;
         elArbol->print();
         List<int> *lineas = elArbol->getLines("es");
         cout << "Lineas en las que aparece la palabra es: ";
         lineas->print();
         cout << endl;
     }
-    void agregarIgnorar(string palabra){
-        ofstream archivo("ignorar.txt", ios::app);//Abre el txt en modo append, asi no borra lo que ya hay escrito
-        if(archivo.is_open() && archivo.good()){
-            archivo << '\n' << palabra;
-            palabrasIgnorar->append(palabra);
-        }
-        archivo.close();
-    }
-    void borrarIgnorar(string palabra){
-        string word;
-        List<string> *lista= new DLinkedList<string>();
-        ifstream archivo("ignorar.txt");//Abre el archivo para lectura
-        if(archivo.is_open()){
-           while(archivo.good()){//crea una lista con todas las palabras que hay en el txt
-            getline(archivo,word);
-            lista->append(word);
-           }
-           archivo.close();
-        }
-        ofstream archivo2("ignorar.txt",ios::out | ios::trunc );//abre de nuevo el archivo pero esta vez lo deja en blanco
-        if(archivo2.is_open()){
-           for(int i = 0; i < lista->getSize();i++){//este for remueve la palabra de la lista de palabras
-                lista->goToPos(i);
-                string elemento = lista->getElement();
-                if(elemento == palabra)
-                   lista->remove();
-            }
-            for(int i = 0; i < lista->getSize();i++){//este for vuelve a agregar las palabras que quedaron en la lista al txt
-                lista->goToPos(i);
-                string elemento = lista->getElement();
-                archivo2 << '\n' << elemento ;
-            }
-            archivo.close();
-        }
 
     void buscarPalabra(string palabra){
         if (elArbol->containsWord(palabra)){

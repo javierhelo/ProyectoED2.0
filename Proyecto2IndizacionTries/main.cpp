@@ -24,14 +24,13 @@ int main(){
     //elControlador->verListaLineas();
     //elControlador->verArbol();
     //elControlador->buscarPalabra("que");
-<<<<<<< Updated upstream
+
     elControlador->verTop(25);
     elControlador->borrarIgnorar("Hola");
 
-=======
     //elControlador->verTop(3);
     //elControlador->borrarIgnorar("Hola");
     elControlador->buscarPorCantidadLetras(4);
->>>>>>> Stashed changes
+
     return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Controlador.h"
+#include "Windows.h"
 
 using namespace std;
 
@@ -7,11 +8,11 @@ int main(){
 
     Controlador *elControlador = new Controlador();
     setlocale(LC_ALL, "spanish");
+    SetConsoleCP(1252);
+    SetConsoleOutputCP(1252);
 
     cout << "Hola, este es el proyecto de indización de textos con Tries." << endl;
     cout << "Ingrese el nombre del archivo de texto a analizar: ";
-    elControlador->agregarIgnorar("Hola");
-    elControlador->agregarIgnorar("Adios");
     string nombreArchivo;               //String ingresado por usuario
     getline(cin, nombreArchivo);
     string extensionTxt = ".txt";          //Extension para archivos .txt
@@ -24,20 +25,9 @@ int main(){
     else
         cout << "Se proceso el archivo con éxito" << endl;
 
-    //elControlador->verListaLineas();
-    //elControlador->verArbol();
-    //elControlador->buscarPalabra("que");
-
-    elControlador->verTop(25);
-    elControlador->borrarIgnorar("Hola");
-
-    //elControlador->verTop(3);
-    //elControlador->borrarIgnorar("Hola");
-//    elControlador->buscarPorCantidadLetras(4);  //Prueba de Juleisy
-    elControlador->cuentaPalabrasPrefijo("es");
-
     //-------MENU PRINCIPAL----------------------------------------------------
     bool sigueCorriendo = true;
+    cout << "Menú" << endl;
     cout << "1. Consulta por prefijo" << endl;
     cout << "2. Buscar palabra" << endl;
     cout << "3. Buscar por cantidad de letras" << endl;
@@ -60,19 +50,19 @@ int main(){
             string prefijo;
             getline(cin, prefijo);
             elControlador->cuentaPalabrasPrefijo(prefijo);
-            break;
             }
-
+            break;
         case 2:
             {
             cout << "Ingrese la palabra a buscar en el árbol: ";
             string palabra;
             getline(cin, palabra);
             elControlador->buscarPalabra(palabra);
-            break;
             }
+            break;
 
         case 3:
+            {
             cout << "Indique la cantidad de letras: ";
             int cantidadLetras;
             cin >> cantidadLetras;
@@ -81,12 +71,15 @@ int main(){
                 cin >> cantidadLetras;
             }
             elControlador->buscarPorCantidadLetras(cantidadLetras);
+            }
             break;
+
         case 4:
+            {
             cout << "1. Agregar palabra a ignorar" << endl;
             cout << "2. Borrar palabra a ignorar" << endl;
             cout << "3. Ver top" << endl;
-            cout << "4. Regresar" << endl;
+            cout << "4. Regresar al menú principal" << endl;
             cout << "Ingrese el número de opción que desee: ";
             int n;
             cin >> n;
@@ -96,6 +89,7 @@ int main(){
             }
             switch(n){
             case 1:
+                {
                 cout << "Ingrese la palabra a ignorar: ";
                 string palabraIgnorar;
                 getline(cin, palabraIgnorar);
@@ -106,8 +100,10 @@ int main(){
                     }
                 }
                 elControlador->agregarIgnorar(palabraIgnorar);
+                }
                 break;
             case 2:
+                {
                 cout << "Ingrese la palabra a borrar: ";
                 string palabraBorrar;
                 getline(cin, palabraBorrar);
@@ -117,20 +113,22 @@ int main(){
                         len = palabraBorrar.size();
                     }
                 }
-
+                elControlador->borrarIgnorar(palabraBorrar);
+                }
+                break;
+            case 3:
+                {
+                cout << "Ingrese la cantidad de elementos que se incluirán en el top:";
+                cin >> n;
+                elControlador->verTop(n);
+                }
             }
+            }
+            break;
         case 5:
             sigueCorriendo = false;
             break;
         }
     }
-
     return 0;
 }
-/*
-for (int i = 0, len = linea.size(); i < len; i++){
-            if (linea[i] == " "){
-                        linea.erase(i--, 1);
-                        len = linea.size();
-                }
-*/

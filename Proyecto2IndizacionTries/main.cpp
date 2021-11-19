@@ -14,9 +14,12 @@ int main(){
     elControlador->agregarIgnorar("Adios");
     string nombreArchivo;               //String ingresado por usuario
     getline(cin, nombreArchivo);
-    nombreArchivo += ".txt";            //Se le agrega la extensión para poder abrirlo
-    bool seProceso = elControlador->procesarArchivo(nombreArchivo);       //llama a la función que lee el archivo y agrega las palabaras en el trie
-    if (seProceso == false)
+    string extensionTxt = ".txt";          //Extension para archivos .txt
+    string extensionPdf = ".pdf";            //Se le agrega la extensión para poder abrirlo
+    bool seProceso = elControlador->procesarArchivo(nombreArchivo + extensionTxt);       //llama a la función que lee el archivo .txt y agrega las palabaras en el trie
+    if (!seProceso)
+        seProceso = elControlador->procesarArchivo(nombreArchivo + extensionPdf);
+    if (!seProceso)
         return 0;
     else
         cout << "Se proceso el archivo con éxito" << endl;

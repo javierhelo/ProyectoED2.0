@@ -10,7 +10,11 @@
 
 
 
+<<<<<<< Updated upstream
 =======
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 0
 1
@@ -756,6 +760,7 @@ Adios
 Adios
 Adios
 Adios
+<<<<<<< Updated upstream
 =======
 Hola
 Adios
@@ -778,6 +783,12 @@ Adios
 Hola
 Adios
 Hola
+Adios
+Hola
+>>>>>>> Stashed changes
+=======
+Adios
+Adios
 Adios
 Hola
 >>>>>>> Stashed changes

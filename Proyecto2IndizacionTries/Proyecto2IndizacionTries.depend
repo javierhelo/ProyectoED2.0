@@ -3,12 +3,9 @@
 	<iostream>
 	<locale.h>
 
-1636763637 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637317905 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
-	<locale.h>
-	<fstream>
-	<string>
-	"include/DLinkedList.h"
+	"Controlador.h"
 
 1634925830 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
@@ -176,11 +173,15 @@
 	"List.h"
 	<stdexcept>
 
+<<<<<<< Updated upstream
 1637288900 source:c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
 	"Controlador.h"
 
 1637290358 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+=======
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+>>>>>>> Stashed changes
 	<iostream>
 	<locale.h>
 	<fstream>
@@ -193,6 +194,7 @@
 	"Trie.h"
 	"MaxHeap.h"
 
+<<<<<<< Updated upstream
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
 	"DNode.h"
@@ -204,22 +206,35 @@
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
 1637297920 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\trie.h
+=======
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\trie.h
+>>>>>>> Stashed changes
 	<string>
 	<iostream>
 	<stdexcept>
 	"TrieNode.h"
+<<<<<<< Updated upstream
 	"KVPair.h"
 
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
+=======
+
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
+>>>>>>> Stashed changes
 	"AVLTreeDictionary.h"
 	"DLinkedList.h"
 	"BSTDictionary.h"
 
+<<<<<<< Updated upstream
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\avltreedictionary.h
+=======
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\avltreedictionary.h
+>>>>>>> Stashed changes
 	"Dictionary.h"
 	"KVPair.h"
 	"AVLTree.h"
 
+<<<<<<< Updated upstream
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
 	"List.h"
 
@@ -233,6 +248,21 @@
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstnode.h
 
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstdictionary.h
+=======
+1631899636 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
+	"List.h"
+
+1631899898 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
+	<iostream>
+
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\avltree.h
+	"BSTNode.h"
+	<stdexcept>
+
+1633541515 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstnode.h
+
+1634925017 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstdictionary.h
+>>>>>>> Stashed changes
 	<stdexcept>
 	<iostream>
 	"Dictionary.h"
@@ -240,18 +270,30 @@
 	"DLinkedList.h"
 	"KVPair.h"
 
+<<<<<<< Updated upstream
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstree.h
+=======
+1634925685 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\bstree.h
+>>>>>>> Stashed changes
 	"BSTNode.h"
 	"DLinkedList.h"
 	<stdexcept>
 
+<<<<<<< Updated upstream
 1637267276 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+=======
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+>>>>>>> Stashed changes
 	"KVPair.h"
 	"List.h"
 	"ArrayList.h"
 	<stdexcept>
 
+<<<<<<< Updated upstream
 1637172024 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\arraylist.h
+=======
+1637317697 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\arraylist.h
+>>>>>>> Stashed changes
 	"List.h"
 	<stdexcept>
 

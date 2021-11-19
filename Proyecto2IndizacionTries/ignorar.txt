@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 
 
 
@@ -9,6 +10,8 @@
 
 
 
+=======
+>>>>>>> Stashed changes
 0
 1
 2
@@ -742,6 +745,7 @@ z
 último
 últimos
 Adios
+<<<<<<< Updated upstream
 Adios
 Adios
 Adios
@@ -752,4 +756,29 @@ Adios
 Adios
 Adios
 Adios
+=======
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+Adios
+Hola
+>>>>>>> Stashed changes
 Adios

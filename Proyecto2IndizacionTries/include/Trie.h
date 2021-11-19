@@ -5,6 +5,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "TrieNode.h"
+#include "KVPair.h"
 
 using std::string;
 using std::cout;
@@ -31,6 +32,22 @@ private:
             string newPrefix = prefix;
             newPrefix.append(1, c);
             getMatchesAux(current->getChild(c), newPrefix, words);
+        }
+        delete children;
+    }
+
+    void numLettersAux(TrieNode *current, int n, List<KVPair<string,int>> *words, string word, int wordSize){
+        if (current->isFinal && wordSize == n){
+            KVPair<string,int> pair(word, current->lineas->getSize());
+            words->append(pair);
+            return;
+        }
+        List<char> *children = current->getChildren();
+        for (children->goToStart(); !children->atEnd(); children->next()){
+            char c = children->getElement();
+            string newWord = word;
+            newWord.append(1, c);
+            numLettersAux(current->getChild(c), n, words, newWord, wordSize + 1);
         }
         delete children;
     }
@@ -117,6 +134,16 @@ public:
         getMatchesAux(current, prefix, words);
         return words;
     }
+
+    List<KVPair<string,int>>* numLetters(int n){
+        if (n <= 0)
+            throw runtime_error("El número debe ser entero positivo. ");
+        List<KVPair<string,int>> *words = new DLinkedList<KVPair<string,int>>();
+        TrieNode* current = root;
+        numLettersAux(current, n, words, "", 0);
+        return words;
+    }
+
     void print(){
         List<string> *words = getMatches("");
         cout << "[ ";

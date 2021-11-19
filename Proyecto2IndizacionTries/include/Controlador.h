@@ -165,6 +165,10 @@ public:
         }
         delete top;
     }
+
+    void buscarPorCantidadLetras(int n){
+        elArbol->numLetters(n)->print();
+    }
 };
 
 #endif // CONTROLADOR_H

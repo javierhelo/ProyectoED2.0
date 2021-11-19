@@ -20,11 +20,18 @@ int main(){
         return 0;
     else
         cout << "Se proceso el archivo con éxito" << endl;
+
     //elControlador->verListaLineas();
     //elControlador->verArbol();
     //elControlador->buscarPalabra("que");
+<<<<<<< Updated upstream
     elControlador->verTop(25);
     elControlador->borrarIgnorar("Hola");
 
+=======
+    //elControlador->verTop(3);
+    //elControlador->borrarIgnorar("Hola");
+    elControlador->buscarPorCantidadLetras(4);
+>>>>>>> Stashed changes
     return 0;
 }

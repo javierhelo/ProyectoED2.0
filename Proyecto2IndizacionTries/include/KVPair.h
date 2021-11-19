@@ -49,7 +49,7 @@ public:
 // y hay que hacerlo en una función aparte.
 template<typename K, typename V>
 ostream& operator<<(ostream& os, const KVPair<K, V>& p) {
-    os << p.key << ", " << p.value;
+    os << p.key << ":" << p.value;
     return os;
 }
 

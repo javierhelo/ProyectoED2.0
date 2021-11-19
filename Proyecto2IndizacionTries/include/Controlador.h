@@ -59,10 +59,12 @@ public:
                     linea.erase(0, pos + espacio.length());
                 }
                 for (unsigned int i = 0; i < palabras.size(); i++){          //se insertan las palabras en el trie
-                    if (!elArbol->containsWord(palabras[i])){
-                        elArbol->insert(palabras[i], lineasArchivo->getSize()-1);
-                    }else{
+                    if (palabras[i] != ""){
+                        if (!elArbol->containsWord(palabras[i])){
+                            elArbol->insert(palabras[i], lineasArchivo->getSize()-1);
+                        }else{
                         elArbol->addLine(lineasArchivo->getSize()-1, palabras[i]);
+                        }
                     }
                 }
             }
@@ -155,7 +157,12 @@ public:
                 top->insert(palabras->getElement(), lines);
             }
         }
-        top->printArray(n);
+        if (n > top->getSize()){
+            throw runtime_error ("n is bigger than the size of the top.");
+        }
+        for (int i = 0; i < n; i++){
+            cout << i+1 << ". " << top->removeFirst() << endl;
+        }
         delete top;
     }
 };

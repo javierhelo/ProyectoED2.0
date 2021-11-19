@@ -46,7 +46,7 @@ private:
         }
     }
     int greaterChild(int pos){
-        if (rightChild(pos) <= size || elements[leftChild(pos)].value > elements[rightChild(pos)].value)
+        if (rightChild(pos) >= size || elements[leftChild(pos)].value > elements[rightChild(pos)].value)
             return leftChild(pos);
         return rightChild(pos);
     }
@@ -97,19 +97,7 @@ public:
     }
     void printArray(int n){
         for (int i = 0; i < n; i++)
-            cout << i << ". " << elements[i] << endl;
-    }
-    List<KVPair<K,V>>* removeTop(int n){
-        if (n > size)
-            throw runtime_error("n is higher than size of the heap");
-        if (n < 0)
-            throw runtime_error("n is 0 or a negative number");
-        List<KVPair<K,V>> *A = new ArrayList<KVPair<K,V>>;
-        for (int i = 0; i < n; i++){
-            A->append(elements[0]);
-            removeFirst();
-        }
-        return A;
+            cout << i+1 << ". " << elements[i] << endl;
     }
 };
 #endif // MAXHEAP_H

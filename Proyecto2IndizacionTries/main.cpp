@@ -23,7 +23,7 @@ int main(){
     //elControlador->verListaLineas();
     //elControlador->verArbol();
     //elControlador->buscarPalabra("que");
-    elControlador->verTop(3);
+    elControlador->verTop(25);
     elControlador->borrarIgnorar("Hola");
 
     return 0;

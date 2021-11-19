@@ -20,7 +20,7 @@
 
 1629913355 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
-1637257548 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637264679 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
 	"Controlador.h"
 
@@ -75,7 +75,7 @@
 	"DLinkedList.h"
 	<stdexcept>
 
-1637256916 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+1637283733 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
 	"KVPair.h"
 	"List.h"
 	"ArrayList.h"
@@ -85,7 +85,7 @@
 	"List.h"
 	<stdexcept>
 
-1637257833 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+1637283964 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 	<iostream>
 	<locale.h>
 	<fstream>

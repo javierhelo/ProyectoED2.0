@@ -33,7 +33,8 @@ int main(){
 
     //elControlador->verTop(3);
     //elControlador->borrarIgnorar("Hola");
-    elControlador->buscarPorCantidadLetras(4);
+//    elControlador->buscarPorCantidadLetras(4);  //Prueba de Juleisy
+    elControlador->cuentaPalabrasPrefijo("es");
 
     return 0;
 }

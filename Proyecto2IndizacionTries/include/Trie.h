@@ -52,6 +52,7 @@ private:
         delete children;
     }
 
+
 public:
     Trie(){
         root = new TrieNode(); //invocamos al constructor de TrieNode
@@ -135,12 +136,28 @@ public:
         return words;
     }
 
-    List<KVPair<string,int>>* numLetters(int n){
+    //Función que devuelve una lista que contiene las palabras con una determinada cantidad de letras junto a la cantidad de veces
+    //que estas aparecen en el texto
+    List<KVPair<string, int>>* numLetters(int n){
         if (n <= 0)
             throw runtime_error("El número debe ser entero positivo. ");
         List<KVPair<string,int>> *words = new DLinkedList<KVPair<string,int>>();
         TrieNode* current = root;
         numLettersAux(current, n, words, "", 0);
+        return words;
+    }
+
+    //Función que solicita al usuario un prefijo para buscar en el árbol. Se muestran todas las palabras que
+    //empiezan con dicho prefijo y la cantidad de veces que aparece cada una en el archivo original.
+    List<KVPair<string, int>>* prefixWordCount(string prefix){
+        List<KVPair<string, int>> *words = new DLinkedList<KVPair<string, int>>();
+        List<string> *matches = getMatches(prefix);
+        for (matches->goToStart(); !matches->atEnd(); matches->next()){
+            string wordActual = matches->getElement();
+            int vecesPalabra = prefixCount(wordActual);
+            KVPair<string, int> pair(wordActual, vecesPalabra);
+            words->append(pair);
+        }
         return words;
     }
 

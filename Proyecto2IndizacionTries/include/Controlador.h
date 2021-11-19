@@ -169,6 +169,10 @@ public:
     void buscarPorCantidadLetras(int n){
         elArbol->numLetters(n)->print();
     }
+    void cuentaPalabrasPrefijo(string prefijo){
+        elArbol->prefixWordCount(prefijo)->print();
+    }
+
 };
 
 #endif // CONTROLADOR_H

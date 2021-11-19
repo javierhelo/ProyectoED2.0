@@ -43,12 +43,12 @@ public:
             while (archivo.good()){
                 getline(archivo, linea);
                 lineasArchivo->append(linea);                      //se agregan linea por linea a la lista
-                std::transform(linea.begin(), linea.end(), linea.begin(),
-                [](unsigned char c){ return std::tolower(c); });    //pone todo en minusculas
-                for (int i = 0, len = linea.size(); i < len; i++){      // este for quita de la linea los signos de puntuación
+                for (int i = 0, len = linea.size(); i < len; i++){      // este for quita de la linea los signos de puntuación y pone todo en minusculas
                     if (ispunct(linea[i]) || std::isdigit(linea[i])){
                         linea.erase(i--, 1);
                         len = linea.size();
+                    }else{
+                        linea[i] = std::tolower(linea[i]);
                     }
                 }
                 string espacio = " ";
@@ -152,8 +152,8 @@ public:
         palabras = elArbol->getMatches("");
         for (int i = 0; i < palabras->getSize(); i++){
             palabras->goToPos(i);
-                int lines = elArbol->getNumLines(palabras->getElement());
-            if(!ignorar->contains(palabras->getElement()) || palabras->getElement() == "\n"){
+            int lines = elArbol->getNumLines(palabras->getElement());
+            if(!ignorar->contains(palabras->getElement())){
                 top->insert(palabras->getElement(), lines);
             }
         }

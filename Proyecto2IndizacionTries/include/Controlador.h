@@ -81,9 +81,9 @@ public:
                     palabra.erase(std::remove(palabra.begin(),palabra.end(), ' '), palabra.end());
                     if (palabra != "" && palabra != " "){
                         if (!elArbol->containsWord(palabra)){
-                            elArbol->insert(palabra, lineasArchivo->getSize());
+                            elArbol->insert(palabra, lineasArchivo->getSize()-1);
                         }else{
-                            elArbol->addLine(lineasArchivo->getSize(), palabra);
+                            elArbol->addLine(lineasArchivo->getSize()-1, palabra);
                         }
                     }
                 }

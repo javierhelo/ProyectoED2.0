@@ -1,6 +1,11 @@
 #ifndef DNODE_H
 #define DNODE_H
 
+/**
+Clase simple que respresenta un nodo doblemente enlazado
+Autor: Mauricio Avilés
+**/
+
 template <typename E>
 class DNode{
 public:

@@ -5,6 +5,11 @@
 
 using std::ostream;
 
+/**
+Clase que representa un KVPair (objeto que almacena una llave con su valor).
+Autor: Mauricio Avilés
+**/
+
 template <typename K, typename V>
 class KVPair {
 public:

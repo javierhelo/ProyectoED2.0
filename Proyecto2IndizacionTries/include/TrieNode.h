@@ -3,7 +3,13 @@
 
 #include "AVLTreeDictionary.h"
 #include "DLinkedList.h"
-#include "BSTDictionary.h"
+
+/**
+Clase que representa un nodo de un árbol trie, sus funciones
+son: añadir una letra, eliminar una letra, obtener el hijo
+de un nodo, obtener todos los hijos de un nodo.
+Autores: Muricio Avilés y Paula Bolaños
+**/
 
 class TrieNode{
 private:

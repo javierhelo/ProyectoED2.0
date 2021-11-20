@@ -2,6 +2,12 @@
 #define DICTIONARY_H
 #include "List.h"
 
+/**
+Clase abstracta que representa un diccionario y las
+funciones que debería tener.
+Autor: Manuel Avilés
+**/
+
 template <typename K, typename V>
 class Dictionary {
 private:

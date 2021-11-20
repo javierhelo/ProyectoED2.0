@@ -6,7 +6,7 @@
 #include <string>
 #include <sstream>
 #include <iterator>
-#include <vector>
+
 #include <algorithm>
 #include "DLinkedList.h"
 #include "Trie.h"
@@ -14,9 +14,21 @@
 
 using std::cout; using std::cin;
 using std::endl; using std::string;
-using std::vector; using std::istringstream;
 using std::stringstream;
 using namespace std;
+
+/**
+Esta clase, como lo dice su nombre, se encarga de controlar lo que pasa
+en el programa principal, cada vez que se selecciona una acción en el menú
+del main, se llama a una funcion de esta clase, sus funciones son: procesar
+el archivo solicitado, además de procesar el archivo de palabras a ordenar
+ver la lista de líneas guardadas, ver el cotenido del árbol, buscar una
+palabra en el texto, agregar una palabra al archivo de ignorar palabras,
+borrar una palabra del archivo de palabras a ignorar, ver el top de las
+palabras más usadas en el archivo, buscar las palabras por su cantidad
+de letras y la cantidad de palabras que contienen un prefijo.
+Autores: Juleisy Porras, David Morales, Javier Helo, Paula Bolaños
+**/
 
 class Controlador{
 public:
@@ -51,19 +63,27 @@ public:
                         linea[i] = std::tolower(linea[i]);
                     }
                 }
-                string espacio = " ";
-                vector<string> palabras{};
-                size_t pos = 0;
-                while ((pos = linea.find(espacio)) != string::npos) {       //se guardan las palabras en un vector
-                    palabras.push_back(linea.substr(0, pos));
-                    linea.erase(0, pos + espacio.length());
-                }
-                for (unsigned int i = 0; i < palabras.size(); i++){          //se insertan las palabras en el trie
-                    if (palabras[i] != ""){
-                        if (!elArbol->containsWord(palabras[i])){
-                            elArbol->insert(palabras[i], lineasArchivo->getSize()-1);
+                int size = linea.size();
+                int espacioPos = 0;
+                for (int i = 0; i < size; i++){
+                    string palabra = "";
+                    espacioPos = 0;
+                    bool encontrado = false;
+                    int j = 0;
+                    while (encontrado == false){
+                        if (linea[j] == ' ')
+                            encontrado = true;
+                        j++;
+                    }
+                    espacioPos = j;
+                    palabra = linea.substr(0, espacioPos);
+                    linea.erase(0, espacioPos);
+                    palabra.erase(std::remove(palabra.begin(),palabra.end(), ' '), palabra.end());
+                    if (palabra != "" && palabra != " "){
+                        if (!elArbol->containsWord(palabra)){
+                            elArbol->insert(palabra, lineasArchivo->getSize());
                         }else{
-                        elArbol->addLine(lineasArchivo->getSize()-1, palabras[i]);
+                            elArbol->addLine(lineasArchivo->getSize(), palabra);
                         }
                     }
                 }
@@ -101,10 +121,6 @@ public:
     void verArbol(){
         cout << "El árbol: " << endl;
         elArbol->print();
-        List<int> *lineas = elArbol->getLines("es");
-        cout << "Lineas en las que aparece la palabra es: ";
-        lineas->print();
-        cout << endl;
     }
 
     void buscarPalabra(string palabra){

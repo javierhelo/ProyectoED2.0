@@ -9,6 +9,16 @@ using std::runtime_error;
 using std::cout;
 using std::endl;
 
+/**
+Clase que representa un diccionario que utiliza la estructura de un AVLTree para
+guardar sus elementos, entre sus funciones está: insertar un elemento al diccionario,
+eliminarlo, obtener el valor asociado a una llave, modificar el valor asociado
+a una llave, ver si un elemento se encuentra en la estructura, obtener todas las
+llaves en el diccionario, obtener todos los valoren en el diccionario, obtener
+la cantidad de elementos en la estructura e imprimir sus elementos.
+Autor: Manuel Avilés
+**/
+
 template <typename K, typename V>
 class AVLTreeDictionary : public Dictionary<K,V>
 {

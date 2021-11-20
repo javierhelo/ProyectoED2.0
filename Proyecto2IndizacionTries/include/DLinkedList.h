@@ -10,6 +10,19 @@ using std::runtime_error;
 using std::cout;
 using std::endl;
 
+/**
+Clase que representa una lista doblemente enlazada, sus funciones
+son: insertar un elemento al incio de una lista, agregar un
+elemento al final de la lista, eliminar un elemento, dejar la lista
+vacia, obtener un elemento, ir al final, ir al incio, ir a una
+posición en especifico, ir al siguiente elemento, al elemento anterior,
+indicar si está al incio de la lista o al final, obtener la posición
+actual, obtener la cantidad de elementos que hay en la lista, obtener
+el indice de un elemento, determinar si la lista contiene un elemento,
+expandir la lista, determinar si una lista es igual a otra e imprimir.
+Autores: Mauricio Avilés y Javier Helo
+**/
+
 template <typename E>
 class DLinkedList : public List<E> {
 private:

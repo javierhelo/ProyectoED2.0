@@ -1,6 +1,11 @@
 #ifndef LIST_H
 #define LIST_H
 
+/**
+Clase que respresenta una Lista estandar, todos sus metodos son virtuales.
+Autor: Mauricio Aviles.
+**/
+
 template <typename E>
 class List{
 private:

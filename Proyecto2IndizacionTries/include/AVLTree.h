@@ -2,10 +2,18 @@
 #define AVLTREE_H
 
 #include "BSTNode.h"
-
 #include <stdexcept>
 
 using std::runtime_error;
+
+/**
+Clase que representa el funcionamiento de un árbol balanceado, cuenta con funciones
+que permien insertar un elemento, encontrar un elemento del árbol, ver si el árbol
+contiene un elemento, eliminar un elemento, limpiar el árbol, obtener todos los
+elementos del árbol y obtener la cantidad de elementos del árbol.
+Autor: Manuel Avilés
+**/
+
 
 template <typename E>
 class AVLTree {

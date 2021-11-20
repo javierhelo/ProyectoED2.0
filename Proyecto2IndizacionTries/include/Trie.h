@@ -12,6 +12,16 @@ using std::cout;
 using std::endl;
 using std::runtime_error;
 
+/**
+Clase que representa un árbol Trie, entre sus funciones esta: insertar una palabras, determinar si una palabra
+se encuentra en el árbol, determinar si se encuentra un prefijo en el árbol, obtener la cantidad de palabras con
+un prefijo, eliminar una palabra, limpiar el árbol, obtener la lista de palabras que contienen un prefijo, obtener
+las palabras con n número de letras, obtener todas las palabras que contienen un prefijo y la cantidad de veces que aparecen en
+el texto, imprimir las palabras en el árbol, obtener el tamaño de la estructura, añadir una línea a la lista de una palabra,
+obtener la lista con las líneas de una palabra y obtener el número de líneas en el que aparece una palabra.
+Autores: Mauricio Avilés, Juleisy Porras, Javier Helo, David Morales y Paula Bolaños
+**/
+
 class Trie{
 private:
     TrieNode *root;

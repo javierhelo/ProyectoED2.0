@@ -8,6 +8,15 @@
 using std::runtime_error;
 using namespace std;
 
+/**
+Clase que representa un maxHeap, entre sus funciones esta:
+insertar un valor, obtener el valor que está de primero,
+eliminar un elemento, eliminar el primer elemento,
+obtener el tamaño de la estructura, determinar si la estructura
+está vacía e imprimir la estructura.
+Autores: Mauricio Avilés y Paula Bolaños
+**/
+
 template <typename K, typename V>
 class MaxHeap{
 private:

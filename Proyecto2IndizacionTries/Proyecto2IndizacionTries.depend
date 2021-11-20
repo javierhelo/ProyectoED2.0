@@ -19,47 +19,49 @@
 
 1629913355 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
-1637264679 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637389345 source:c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
+	<string>
 	"Controlador.h"
+	"Windows.h"
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
+1637392852 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
 	"DNode.h"
 	<stdexcept>
 	<iostream>
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\list.h
+1637391046 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\list.h
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
+1637392889 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
-1637255259 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trie.h
+1637393464 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trie.h
 	<string>
 	<iostream>
 	<stdexcept>
 	"TrieNode.h"
+	"KVPair.h"
 
-1637033504 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
+1637393623 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
 	"AVLTreeDictionary.h"
 	"DLinkedList.h"
-	"BSTDictionary.h"
 
-1637033843 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltreedictionary.h
+1637392143 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltreedictionary.h
 	"Dictionary.h"
 	"KVPair.h"
 	"AVLTree.h"
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
+1637392591 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
 	"List.h"
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
+1637392949 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
 	<iostream>
 
-1637034022 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltree.h
+1637391735 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\avltree.h
 	"BSTNode.h"
 	<stdexcept>
 
-1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstnode.h
+1637392060 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstnode.h
 
 1636819593 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\bstdictionary.h
 	<stdexcept>
@@ -74,24 +76,23 @@
 	"DLinkedList.h"
 	<stdexcept>
 
-1637283733 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+1637393080 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
 	"KVPair.h"
 	"List.h"
 	"ArrayList.h"
 	<stdexcept>
 
-1633365081 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\arraylist.h
+1637391719 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\arraylist.h
 	"List.h"
 	<stdexcept>
 
-1637300493 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+1637392544 c:\users\paubo\onedrive\documentos\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 	<iostream>
 	<locale.h>
 	<fstream>
 	<string>
 	<sstream>
 	<iterator>
-	<vector>
 	<algorithm>
 	"DLinkedList.h"
 	"Trie.h"

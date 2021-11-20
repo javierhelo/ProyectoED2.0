@@ -1,6 +1,13 @@
 #ifndef BSTNODE_H
 #define BSTNODE_H
 
+/**
+Clase que representa un nodo de un árbol BST, es una clase simple
+al igual que sus funciones que son: decir si un nodo es hoja,
+la cantidad de hijos que tiene el nodo y retorna su hijo único.
+Autor: Mauricio Avilés
+**/
+
 template <typename E>
 class BSTNode {
 public:

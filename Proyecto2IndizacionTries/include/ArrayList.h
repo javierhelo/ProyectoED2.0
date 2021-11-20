@@ -8,6 +8,14 @@
 using namespace std;
 using std::runtime_error;
 
+/**
+Esta es una clase abstracta que respresenta un ArrayList, en esta clase se puede guardar
+cualquier tipo de datos, tiene funcionalidades para agregar elementos, hacer el array más grande,
+eliminar elementos, obtener la posicion de un elemento, el tamaño del array, ir a diferentes posiciones
+dentro del array y obtener el elemento en el que esta la posicion.
+Autor: Mauricio Aviles
+**/
+
 template <typename E>
 class ArrayList : public List<E>{
 private:

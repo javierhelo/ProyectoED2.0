@@ -123,28 +123,33 @@ public:
         ofstream archivo("ignorar.txt", ios::app);//Abre el txt en modo append, asi no borra lo que ya hay escrito
         if(archivo.is_open() && archivo.good()){
             archivo << '\n' << palabra;
-            //ignorar->append(palabra);
-            //ignorar->print();
+            ignorar->append(palabra);
         }
         archivo.close();
     }
     void borrarIgnorar(string palabra){
-        ofstream archivo2("ignorar.txt",ios::out | ios::trunc );//abre el archivo pero esta vez lo deja en blanco
-        if(archivo2.is_open()){
-           for(int i = 0; i < ignorar->getSize();i++){//este for remueve la palabra de la lista de palabras
-                ignorar->goToPos(i);
-                string elemento = ignorar->getElement();
-                if(elemento == palabra){
-                   ignorar->remove();
+        bool existe = ignorar->contains(palabra);
+        if(existe){
+            ofstream archivo2("ignorar.txt",ios::out | ios::trunc );//abre el archivo pero esta vez lo deja en blanco
+            if(archivo2.is_open()){
+               for(int i = 0; i < ignorar->getSize();i++){//este for remueve la palabra de la lista de palabras
+                    ignorar->goToPos(i);
+                    string elemento = ignorar->getElement();
+                    if(elemento == palabra){
+                       ignorar->remove();
+                    }
                 }
+                for(int i = 0; i < ignorar->getSize();i++){//este for vuelve a agregar las palabras que quedaron en la lista al txt
+                    ignorar->goToPos(i);
+                    string elemento = ignorar->getElement();
+                    archivo2 << '\n' << elemento ;
+                }
+                archivo2.close();
             }
-            for(int i = 0; i < ignorar->getSize();i++){//este for vuelve a agregar las palabras que quedaron en la lista al txt
-                ignorar->goToPos(i);
-                string elemento = ignorar->getElement();
-                archivo2 << '\n' << elemento ;
-            }
-            archivo2.close();
+        }else{
+            cout << "La palabra no existe en el archivo ignorar.txt" << endl;
         }
+
     }
     void verTop(int n){
         MaxHeap<string, int> *top = new MaxHeap<string, int>();

@@ -11,7 +11,6 @@ int main(){
     setlocale(LC_ALL, "spanish");
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
-    cout << "Prueba 2" << endl;
     cout << "Hola, este es el proyecto de indización de textos con Tries." << endl;
     cout << "Ingrese el nombre del archivo de texto a analizar: ";
     string nombreArchivo;               //String ingresado por usuario
@@ -24,14 +23,14 @@ int main(){
     if (!seProceso)
         return 0;
     else
-        cout << "Se proceso el archivo con éxito" << endl;
+        cout << "Se proceso el archivo con éxito" << endl << endl;
 
     //-------MENU PRINCIPAL----------------------------------------------------
     bool sigueCorriendo = true;
 
     while (sigueCorriendo){
         int decision;
-        cout << "Menú" << endl;
+        cout << "------Menú------" << endl;
         cout << "1.Consulta por prefijo" << endl;
         cout << "2. Buscar palabra" << endl;
         cout << "3. Buscar por cantidad de letras" << endl;
@@ -39,6 +38,7 @@ int main(){
         cout << "5. Salir" << endl;
         cout << "Digite la opción que desee utilizar: ";
         cin >> decision;
+        cout << endl;
         while (cin.fail() || decision < 1 || decision > 5){
             cin.clear();
             cin.ignore(1000, '\n');
@@ -78,6 +78,7 @@ int main(){
             cin.clear();
             cin.ignore(1000, '\n');
             cin >> n;
+            cout << endl;
             while (cin.fail() || n < 1 || n > 4){
                 cout << "Ingrese una opción válida (1-4): ";
                 cin.clear();

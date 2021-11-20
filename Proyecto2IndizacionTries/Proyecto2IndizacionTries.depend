@@ -97,11 +97,13 @@
 	"Trie.h"
 	"MaxHeap.h"
 
-1637262552 source:c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637378628 source:c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
+	<string>
 	"Controlador.h"
+	"Windows.h"
 
-1637263599 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+1637378681 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 	<iostream>
 	<locale.h>
 	<fstream>
@@ -114,7 +116,7 @@
 	"Trie.h"
 	"MaxHeap.h"
 
-1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
+1637376221 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
 	"DNode.h"
 	<stdexcept>
@@ -124,11 +126,12 @@
 
 1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\dnode.h
 
-1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\trie.h
+1637302566 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\trie.h
 	<string>
 	<iostream>
 	<stdexcept>
 	"TrieNode.h"
+	"KVPair.h"
 
 1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\trienode.h
 	"AVLTreeDictionary.h"
@@ -143,7 +146,7 @@
 1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\dictionary.h
 	"List.h"
 
-1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
+1637302566 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\kvpair.h
 	<iostream>
 
 1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\avltree.h
@@ -165,7 +168,7 @@
 	"DLinkedList.h"
 	<stdexcept>
 
-1637250788 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
+1637286947 c:\users\dmv\desktop\ii sem\ed\proyectoed2.0\proyecto2indizaciontries\include\maxheap.h
 	"KVPair.h"
 	"List.h"
 	"ArrayList.h"

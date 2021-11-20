@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Controlador.h"
 #include "Windows.h"
 
@@ -27,108 +28,110 @@ int main(){
 
     //-------MENU PRINCIPAL----------------------------------------------------
     bool sigueCorriendo = true;
-    cout << "Menú" << endl;
-    cout << "1. Consulta por prefijo" << endl;
-    cout << "2. Buscar palabra" << endl;
-    cout << "3. Buscar por cantidad de letras" << endl;
-    cout << "4. Palabras más utilizadas" << endl;
-    cout << "5. Salir" << endl;
-    cout << "Elija la opción que desee: ";
 
-    while(sigueCorriendo){
-        int laDecision;
-        cin >> laDecision;
-        while (cin.fail() || laDecision < 1 || laDecision > 4){
-            cout << "Elija una opción válida (1-4): ";
+    while (sigueCorriendo){
+        int decision;
+        cout << "Menú" << endl;
+        cout << "1.Consulta por prefijo" << endl;
+        cout << "2. Buscar palabra" << endl;
+        cout << "3. Buscar por cantidad de letras" << endl;
+        cout << "4. Palabras más utilizadas" << endl;
+        cout << "5. Salir" << endl;
+        cout << "Digite la opción que desee utilizar: ";
+        cin >> decision;
+        while (cin.fail() || decision < 1 || decision > 5){
             cin.clear();
             cin.ignore(1000, '\n');
+            cin >> decision;
         }
-        switch(laDecision){
-        case 1:
-            {
-            cout << "Ingrese el prefijo a buscar en el árbol: ";
+        if (decision == 1){
             string prefijo;
+            cout << "Ingrese el prefijo a buscar en el árbol: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
             getline(cin, prefijo);
             elControlador->cuentaPalabrasPrefijo(prefijo);
-            }
-            break;
-        case 2:
-            {
-            cout << "Ingrese la palabra a buscar en el árbol: ";
+        }else if(decision == 2){
             string palabra;
+            cout << "Ingrese la palabra a buscar en el árbol: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
             getline(cin, palabra);
             elControlador->buscarPalabra(palabra);
-            }
-            break;
-
-        case 3:
-            {
-            cout << "Indique la cantidad de letras: ";
+        }else if (decision == 3){
             int cantidadLetras;
+            cout << "Indique la cantidad de letras: ";
             cin >> cantidadLetras;
             while(cin.fail() || cantidadLetras < 1){
-                cout << "La cantidad de letras debe ser un entero positivo: ";
-                cin >> cantidadLetras;
+                cout << "Ingrese una cantidad de letras válida: ";
+                cin.clear();
+                cin.ignore(1000, '\n');
             }
             elControlador->buscarPorCantidadLetras(cantidadLetras);
-            }
-            break;
-
-        case 4:
-            {
+        }else if (decision == 4){
+            int n;
             cout << "1. Agregar palabra a ignorar" << endl;
             cout << "2. Borrar palabra a ignorar" << endl;
             cout << "3. Ver top" << endl;
-            cout << "4. Regresar al menú principal" << endl;
-            cout << "Ingrese el número de opción que desee: ";
-            int n;
+            cout << "4. Regresar" << endl;
+            cout << "Ingrese cual opción desea: ";
             cin >> n;
             while (cin.fail() || n < 1 || n > 4){
-                cout << "Ingrese un número válido (1-4): ";
+                cout << "Ingrese una opción válida (1-4): ";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 cin >> n;
             }
-            switch(n){
-            case 1:
-                {
-                cout << "Ingrese la palabra a ignorar: ";
+            if (n == 1){
                 string palabraIgnorar;
+                cout << "Escriba la palabra nueva a ignorar: ";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 getline(cin, palabraIgnorar);
-                for (int i = 0, len = palabraIgnorar.size(); i < len; i++){     //Quitar espacios de la palabraIgnorar
-                    if (palabraIgnorar[i] == " "){
-                        palabraIgnorar.erase(i--, 1);
-                        len = palabraIgnorar.size();
+                bool tieneEspacios = false;
+                for (unsigned int i = 0; i < palabraIgnorar.size(); i++){
+                    if (palabraIgnorar[i] = ' '){
+                        tieneEspacios = true;
                     }
                 }
-                elControlador->agregarIgnorar(palabraIgnorar);
+                if (tieneEspacios){
+                    cout << "No puede ingresar palabras con espacios." << endl;
+                }else{
+                    elControlador->agregarIgnorar(palabraIgnorar);
                 }
-                break;
-            case 2:
-                {
-                cout << "Ingrese la palabra a borrar: ";
+            }else if (n == 2){
                 string palabraBorrar;
+                cout << "Escriba la palabra a borrar: ";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 getline(cin, palabraBorrar);
-                for (int i = 0, len = palabraBorrar.size(); i < len; i++){     //Quitar espacios de la palabraIgnorar
-                    if (palabraBorrar[i] == " "){
-                        palabraBorrar.erase(i--, 1);
-                        len = palabraBorrar.size();
+                bool tieneEspacios = false;
+                for (unsigned int i = 0; i < palabraBorrar.size(); i++){
+                    if (palabraBorrar[i] == ' '){
+                        tieneEspacios = true;
                     }
                 }
-                elControlador->borrarIgnorar(palabraBorrar);
+                if (tieneEspacios){
+                    cout << "No puede ingresar palabras con espacios." << endl;
+                }else{
+                    elControlador->borrarIgnorar(palabraBorrar);
                 }
-                break;
-            case 3:
-                {
-                cout << "Ingrese la cantidad de elementos que se incluirán en el top:";
-                cin >> n;
-                elControlador->verTop(n);
+            }else if (n == 3){
+                int numero;
+                cout << "Ingrese la cantidad de elementos que se incluirán en el top: ";
+                cin >> numero;
+                while (cin.fail() || numero < 1){
+                    cout << "Ingrese un número entero positivo para la cantidad de elementos del top: ";
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cin >> numero;
                 }
+                elControlador->verTop(numero);
             }
-            }
-            break;
-        case 5:
+        }else{
             sigueCorriendo = false;
-            break;
         }
+    cout << endl;
     }
     return 0;
 }

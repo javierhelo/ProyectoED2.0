@@ -1,25 +1,4 @@
 
-
-
-
-
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-
-
-
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 0
 1
 2
@@ -752,42 +731,3 @@ z
 últimas
 último
 últimos
-Adios
-<<<<<<< Updated upstream
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-<<<<<<< Updated upstream
-=======
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
->>>>>>> Stashed changes
-=======
-Adios
-Adios
-Adios
->>>>>>> Stashed changes
-Adios
-Adios
-Adios
-Adios
-Adios
-Adios
-Hola
-Adios

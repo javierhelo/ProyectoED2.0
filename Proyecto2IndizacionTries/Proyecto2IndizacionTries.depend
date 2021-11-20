@@ -3,11 +3,13 @@
 	<iostream>
 	<locale.h>
 
-1637322139 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
+1637372956 source:c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\main.cpp
 	<iostream>
+	<string>
 	"Controlador.h"
+	"Windows.h"
 
-1634925830 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
+1637372873 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\dlinkedlist.h
 	"List.h"
 	"DNode.h"
 	<stdexcept>
@@ -182,7 +184,7 @@
 
 1637290358 c:\users\juley\documents\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 
-1637322139 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
+1637328453 c:\users\javier\documents\github\proyectoed2.0\proyecto2indizaciontries\include\controlador.h
 	<iostream>
 	<locale.h>
 	<fstream>

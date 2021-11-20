@@ -31,7 +31,7 @@ public:
     }
     void insert(E element){
         current-> next = current->next->previous =
-            new DNode<E> (element, current->next, current);
+        new DNode<E> (element, current->next, current);
         size++;
     }
     void append(E element){
@@ -155,7 +155,7 @@ public:
         cout << "[ ";
         for (goToStart(); !atEnd(); next())
             cout << getElement() << " ";
-        cout << "]";
+        cout << "]" << endl;
         current = oldCurrent;
     }
 };

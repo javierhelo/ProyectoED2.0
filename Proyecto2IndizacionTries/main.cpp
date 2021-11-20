@@ -11,7 +11,7 @@ int main(){
     setlocale(LC_ALL, "spanish");
     SetConsoleCP(1252);
     SetConsoleOutputCP(1252);
-
+    cout << "Prueba 2" << endl;
     cout << "Hola, este es el proyecto de indización de textos con Tries." << endl;
     cout << "Ingrese el nombre del archivo de texto a analizar: ";
     string nombreArchivo;               //String ingresado por usuario
@@ -75,6 +75,8 @@ int main(){
             cout << "3. Ver top" << endl;
             cout << "4. Regresar" << endl;
             cout << "Ingrese cual opción desea: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
             cin >> n;
             while (cin.fail() || n < 1 || n > 4){
                 cout << "Ingrese una opción válida (1-4): ";
@@ -88,37 +90,19 @@ int main(){
                 cin.clear();
                 cin.ignore(1000, '\n');
                 getline(cin, palabraIgnorar);
-                bool tieneEspacios = false;
-                for (unsigned int i = 0; i < palabraIgnorar.size(); i++){
-                    if (palabraIgnorar[i] = ' '){
-                        tieneEspacios = true;
-                    }
-                }
-                if (tieneEspacios){
-                    cout << "No puede ingresar palabras con espacios." << endl;
-                }else{
-                    elControlador->agregarIgnorar(palabraIgnorar);
-                }
+                elControlador->agregarIgnorar(palabraIgnorar);
             }else if (n == 2){
                 string palabraBorrar;
                 cout << "Escriba la palabra a borrar: ";
                 cin.clear();
                 cin.ignore(1000, '\n');
                 getline(cin, palabraBorrar);
-                bool tieneEspacios = false;
-                for (unsigned int i = 0; i < palabraBorrar.size(); i++){
-                    if (palabraBorrar[i] == ' '){
-                        tieneEspacios = true;
-                    }
-                }
-                if (tieneEspacios){
-                    cout << "No puede ingresar palabras con espacios." << endl;
-                }else{
-                    elControlador->borrarIgnorar(palabraBorrar);
-                }
+                elControlador->borrarIgnorar(palabraBorrar);
             }else if (n == 3){
                 int numero;
                 cout << "Ingrese la cantidad de elementos que se incluirán en el top: ";
+                cin.clear();
+                cin.ignore(1000, '\n');
                 cin >> numero;
                 while (cin.fail() || numero < 1){
                     cout << "Ingrese un número entero positivo para la cantidad de elementos del top: ";
@@ -131,7 +115,7 @@ int main(){
         }else{
             sigueCorriendo = false;
         }
-    cout << endl;
+        cout << " " << endl;
     }
     return 0;
 }

@@ -31,7 +31,7 @@ int main(){
     while (sigueCorriendo){
         int decision;
         cout << "------Menú------" << endl;
-        cout << "1.Consulta por prefijo" << endl;
+        cout << "1. Consulta por prefijo" << endl;
         cout << "2. Buscar palabra" << endl;
         cout << "3. Buscar por cantidad de letras" << endl;
         cout << "4. Palabras más utilizadas" << endl;
